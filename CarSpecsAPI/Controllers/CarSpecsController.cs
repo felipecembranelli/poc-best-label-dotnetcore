@@ -21,17 +21,61 @@ public class CarSpecsController : ControllerBase
     [HttpGet(Name = "GetCarSpecs")]
     public IEnumerable<CarSpec> Get()
     {
-        return Enumerable.Range(1, 4).Select(index => new CarSpec
+
+        const int NUM_TOTAL_FEATURES = 100;
+        const int NUM_CARS = 5;
+
+        List<CarSpec> carSpecList = new List<CarSpec>();
+
+        for (int index = 1; index < NUM_CARS; index++)
         {
-            CarId = index.ToString(),
-            CarName = "Car"+ index.ToString(),
-            SatelliteNavigation = "SatelliteNavigation" + index.ToString(),
-            LeatherSeats = "LeatherSeats" + index.ToString(),
-            HeatedFrontSeats = "HeatedFrontSeats" + index.ToString(),
-            BluetoothHandsfreeSystem = "BluetoothHandsfreeSystem" + index.ToString(),
-            CruiseControl = "CruiseControl" + index.ToString(),
-            AutomaticHeadlights = "AutomaticHeadlights" + index.ToString()
-        })
-        .ToArray();
+            // generate new car specs
+            var baseCar = new CarSpec {
+                CarId = index.ToString(),
+                CarName = "Car" + index.ToString(),
+                SatelliteNavigation = GetRandomValue(),
+                LeatherSeats = GetRandomValue(),
+                HeatedFrontSeats = GetRandomValue(),
+                BluetoothHandsfreeSystem = GetRandomValue(),
+                CruiseControl = GetRandomValue(),
+                AutomaticHeadlights = GetRandomValue()
+
+            };
+            
+            // set values for dummy features
+            for (int i = 1; i <= NUM_TOTAL_FEATURES; i++)
+            {
+                var featureName = "feature"+ i.ToString();
+
+                // get base car feature value
+                var nameOfProperty = featureName;
+                var propertyInfo = baseCar.GetType().GetProperty(nameOfProperty);
+                
+                var baseCarFeatureValue = GetRandomValue();
+
+                propertyInfo.SetValue(baseCar, baseCarFeatureValue);
+            }
+
+            carSpecList.Add(baseCar);
+        }
+
+        return carSpecList.ToArray();
+
+
+    }
+
+    static string GetRandomValue() 
+    {
+
+        List<string> list =  new List<string> {"Standard", "Optional", "Not Available"};
+
+        Random rnd = new Random();
+
+        int r = rnd.Next(list.Count);
+
+        return (string)list[r];
     }
 }
+
+
+
