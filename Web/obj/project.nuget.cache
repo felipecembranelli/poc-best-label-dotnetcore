@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "lsub9127DgZnU7icWKEaaZBULmQiuLtjztqZFLQuiGRxrzW4uiTpIJQsNZVZAVH3vn1Rn7zZT8xejd/MND3I+Q==",
+  "success": true,
+  "projectFilePath": "/Users/feliperc/wkd/projects/personal/poc-best-label/Web/Web.csproj",
+  "expectedPackageFiles": [
+    "/Users/feliperc/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
+    "/Users/feliperc/.nuget/packages/microsoft.netcore.app.ref/3.0.0/microsoft.netcore.app.ref.3.0.0.nupkg.sha512",
+    "/Users/feliperc/.nuget/packages/microsoft.aspnetcore.app.ref/3.0.1/microsoft.aspnetcore.app.ref.3.0.1.nupkg.sha512",
+    "/Users/feliperc/.nuget/packages/microsoft.netcore.app.host.osx-x64/3.0.3/microsoft.netcore.app.host.osx-x64.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
