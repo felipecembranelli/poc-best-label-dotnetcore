@@ -1,175 +1,114 @@
 using System.Text.Json.Serialization;
 
-/* public record class CarSpec(
-    [property: JsonPropertyName("carid")] string CarId,
-    [property: JsonPropertyName("carname")] string CarName,
-    [property: JsonPropertyName("SatelliteNavigation")] string SatelliteNavigation,
-    [property: JsonPropertyName("LeatherSeats")] string LeatherSeats,
-    [property: JsonPropertyName("HeatedFrontSeats")] string HeatedFrontSeats,
-    [property: JsonPropertyName("BluetoothHandsfreeSystem")] string BluetoothHandsfreeSystem,
-    [property: JsonPropertyName("CruiseControl")] string CruiseControl,
-    [property: JsonPropertyName("AutomaticHeadlights")] string AutomaticHeadlights,
-    [property: JsonPropertyName("feature1")] string Feature1,
-    [property: JsonPropertyName("feature2")] string Feature2,
-    [property: JsonPropertyName("feature3")] string Feature3,
-    [property: JsonPropertyName("feature4")] string Feature4,
-    [property: JsonPropertyName("feature5")] string Feature5,
-    [property: JsonPropertyName("feature6")] string Feature6,
-    [property: JsonPropertyName("feature7")] string Feature7,
-    [property: JsonPropertyName("feature8")] string Feature8,
-    [property: JsonPropertyName("feature9")] string Feature9,
-    [property: JsonPropertyName("feature10")] string Feature10,
-    [property: JsonPropertyName("feature11")] string Feature11,
-    [property: JsonPropertyName("feature12")] string Feature12,
-    [property: JsonPropertyName("feature13")] string Feature13,
-    [property: JsonPropertyName("feature14")] string Feature14,
-    [property: JsonPropertyName("feature15")] string Feature15,
-    [property: JsonPropertyName("feature16")] string Feature16,
-    [property: JsonPropertyName("feature17")] string Feature17,
-    [property: JsonPropertyName("feature18")] string Feature18,
-    [property: JsonPropertyName("feature19")] string Feature19,
-    [property: JsonPropertyName("feature20")] string Feature20,
-    [property: JsonPropertyName("feature21")] string Feature21,
-    [property: JsonPropertyName("feature22")] string Feature22,
-    [property: JsonPropertyName("feature23")] string Feature23,
-    [property: JsonPropertyName("feature24")] string Feature24,
-    [property: JsonPropertyName("feature25")] string Feature25,
-    [property: JsonPropertyName("feature26")] string Feature26,
-    [property: JsonPropertyName("feature27")] string Feature27,
-    [property: JsonPropertyName("feature28")] string Feature28,
-    [property: JsonPropertyName("feature29")] string Feature29,
-    [property: JsonPropertyName("feature30")] string Feature30,
-    [property: JsonPropertyName("feature31")] string Feature31,
-    [property: JsonPropertyName("feature32")] string Feature32,
-    [property: JsonPropertyName("feature33")] string Feature33,
-    [property: JsonPropertyName("feature34")] string Feature34,
-    [property: JsonPropertyName("feature35")] string Feature35,
-    [property: JsonPropertyName("feature36")] string Feature36,
-    [property: JsonPropertyName("feature37")] string Feature37,
-    [property: JsonPropertyName("feature38")] string Feature38,
-    [property: JsonPropertyName("feature39")] string Feature39,
-    [property: JsonPropertyName("feature40")] string Feature40,
-    [property: JsonPropertyName("feature41")] string Feature41,
-    [property: JsonPropertyName("feature42")] string Feature42,
-    [property: JsonPropertyName("feature43")] string Feature43,
-    [property: JsonPropertyName("feature44")] string Feature44,
-    [property: JsonPropertyName("feature45")] string Feature45,
-    [property: JsonPropertyName("feature46")] string Feature46,
-    [property: JsonPropertyName("feature47")] string Feature47,
-    [property: JsonPropertyName("feature48")] string Feature48,
-    [property: JsonPropertyName("feature49")] string Feature49,
-    [property: JsonPropertyName("feature50")] string Feature50)
-{
-
-      //public DateTime LastPush => LastPushUtc.ToLocalTime();
-
-} */
-
-
-public record class CarSpec(
-      [property: JsonPropertyName("carid")] string CarId,
-      [property: JsonPropertyName("carname")] string CarName,
-      [property: JsonPropertyName("SatelliteNavigation")] string SatelliteNavigation,
-      [property: JsonPropertyName("LeatherSeats")] string LeatherSeats,
-      [property: JsonPropertyName("HeatedFrontSeats")] string HeatedFrontSeats,
-      [property: JsonPropertyName("BluetoothHandsfreeSystem")] string BluetoothHandsfreeSystem,
-      [property: JsonPropertyName("CruiseControl")] string CruiseControl,
-      [property: JsonPropertyName("AutomaticHeadlights")] string AutomaticHeadlights,
-      [property: JsonPropertyName("feature1")] string Feature1= "Not Available",
-      [property: JsonPropertyName("feature2")] string Feature2= "Not Available",
-      [property: JsonPropertyName("feature3")] string Feature3= "Not Available",
-      [property: JsonPropertyName("feature4")] string Feature4= "Not Available",
-      [property: JsonPropertyName("feature5")] string Feature5= "Not Available",
-      [property: JsonPropertyName("feature6")] string Feature6= "Not Available",
-      [property: JsonPropertyName("feature7")] string Feature7= "Not Available",
-      [property: JsonPropertyName("feature8")] string Feature8= "Not Available",
-      [property: JsonPropertyName("feature9")] string Feature9= "Not Available",
-      [property: JsonPropertyName("feature10")] string Feature10= "Not Available",
-      [property: JsonPropertyName("feature11")] string Feature11= "Not Available",
-      [property: JsonPropertyName("feature12")] string Feature12= "Not Available",
-      [property: JsonPropertyName("feature13")] string Feature13= "Not Available",
-      [property: JsonPropertyName("feature14")] string Feature14= "Not Available",
-      [property: JsonPropertyName("feature15")] string Feature15= "Not Available",
-      [property: JsonPropertyName("feature16")] string Feature16= "Not Available",
-      [property: JsonPropertyName("feature17")] string Feature17= "Not Available",
-      [property: JsonPropertyName("feature18")] string Feature18= "Not Available",
-      [property: JsonPropertyName("feature19")] string Feature19= "Not Available",
-      [property: JsonPropertyName("feature20")] string Feature20= "Not Available",
-      [property: JsonPropertyName("feature21")] string Feature21= "Not Available",
-      [property: JsonPropertyName("feature22")] string Feature22= "Not Available",
-      [property: JsonPropertyName("feature23")] string Feature23= "Not Available",
-      [property: JsonPropertyName("feature24")] string Feature24= "Not Available",
-      [property: JsonPropertyName("feature25")] string Feature25= "Not Available",
-      [property: JsonPropertyName("feature26")] string Feature26= "Not Available",
-      [property: JsonPropertyName("feature27")] string Feature27= "Not Available",
-      [property: JsonPropertyName("feature28")] string Feature28= "Not Available",
-      [property: JsonPropertyName("feature29")] string Feature29= "Not Available",
-      [property: JsonPropertyName("feature30")] string Feature30= "Not Available",
-      [property: JsonPropertyName("feature31")] string Feature31= "Not Available",
-      [property: JsonPropertyName("feature32")] string Feature32= "Not Available",
-      [property: JsonPropertyName("feature33")] string Feature33= "Not Available",
-      [property: JsonPropertyName("feature34")] string Feature34= "Not Available",
-      [property: JsonPropertyName("feature35")] string Feature35= "Not Available",
-      [property: JsonPropertyName("feature36")] string Feature36= "Not Available",
-      [property: JsonPropertyName("feature37")] string Feature37= "Not Available",
-      [property: JsonPropertyName("feature38")] string Feature38= "Not Available",
-      [property: JsonPropertyName("feature39")] string Feature39= "Not Available",
-      [property: JsonPropertyName("feature40")] string Feature40= "Not Available",
-      [property: JsonPropertyName("feature41")] string Feature41= "Not Available",
-      [property: JsonPropertyName("feature42")] string Feature42= "Not Available",
-      [property: JsonPropertyName("feature43")] string Feature43= "Not Available",
-      [property: JsonPropertyName("feature44")] string Feature44= "Not Available",
-      [property: JsonPropertyName("feature45")] string Feature45= "Not Available",
-      [property: JsonPropertyName("feature46")] string Feature46= "Not Available",
-      [property: JsonPropertyName("feature47")] string Feature47= "Not Available",
-      [property: JsonPropertyName("feature48")] string Feature48= "Not Available",
-      [property: JsonPropertyName("feature49")] string Feature49= "Not Available",
-      [property: JsonPropertyName("feature50")] string Feature50= "Not Available",
-      [property: JsonPropertyName("feature51")] string Feature51= "Not Available",
-      [property: JsonPropertyName("feature52")] string Feature52= "Not Available",
-      [property: JsonPropertyName("feature53")] string Feature53= "Not Available",
-      [property: JsonPropertyName("feature54")] string Feature54= "Not Available",
-      [property: JsonPropertyName("feature55")] string Feature55= "Not Available",
-      [property: JsonPropertyName("feature56")] string Feature56= "Not Available",
-      [property: JsonPropertyName("feature57")] string Feature57= "Not Available",
-      [property: JsonPropertyName("feature58")] string Feature58= "Not Available",
-      [property: JsonPropertyName("feature59")] string Feature59= "Not Available",
-      [property: JsonPropertyName("feature60")] string Feature60= "Not Available",
-      [property: JsonPropertyName("feature61")] string Feature61= "Not Available",
-      [property: JsonPropertyName("feature62")] string Feature62= "Not Available",
-      [property: JsonPropertyName("feature63")] string Feature63= "Not Available",
-      [property: JsonPropertyName("feature64")] string Feature64= "Not Available",
-      [property: JsonPropertyName("feature65")] string Feature65= "Not Available",
-      [property: JsonPropertyName("feature66")] string Feature66= "Not Available",
-      [property: JsonPropertyName("feature67")] string Feature67= "Not Available",
-      [property: JsonPropertyName("feature68")] string Feature68= "Not Available",
-      [property: JsonPropertyName("feature69")] string Feature69= "Not Available",
-      [property: JsonPropertyName("feature70")] string Feature70= "Not Available",
-      [property: JsonPropertyName("feature71")] string Feature71= "Not Available",
-      [property: JsonPropertyName("feature72")] string Feature72= "Not Available",
-      [property: JsonPropertyName("feature73")] string Feature73= "Not Available",
-      [property: JsonPropertyName("feature74")] string Feature74= "Not Available",
-      [property: JsonPropertyName("feature75")] string Feature75= "Not Available",
-      [property: JsonPropertyName("feature76")] string Feature76= "Not Available",
-      [property: JsonPropertyName("feature77")] string Feature77= "Not Available",
-      [property: JsonPropertyName("feature78")] string Feature78= "Not Available",
-      [property: JsonPropertyName("feature79")] string Feature79= "Not Available",
-      [property: JsonPropertyName("feature80")] string Feature80= "Not Available",
-      [property: JsonPropertyName("feature81")] string Feature81= "Not Available",
-      [property: JsonPropertyName("feature82")] string Feature82= "Not Available",
-      [property: JsonPropertyName("feature83")] string Feature83= "Not Available",
-      [property: JsonPropertyName("feature84")] string Feature84= "Not Available",
-      [property: JsonPropertyName("feature85")] string Feature85= "Not Available",
-      [property: JsonPropertyName("feature86")] string Feature86= "Not Available",
-      [property: JsonPropertyName("feature87")] string Feature87= "Not Available",
-      [property: JsonPropertyName("feature88")] string Feature88= "Not Available",
-      [property: JsonPropertyName("feature89")] string Feature89= "Not Available",
-      [property: JsonPropertyName("feature90")] string Feature90= "Not Available",
-      [property: JsonPropertyName("feature91")] string Feature91= "Not Available",
-      [property: JsonPropertyName("feature92")] string Feature92= "Not Available"
-   )
-{
-
-      //public DateTime LastPush => LastPushUtc.ToLocalTime();
-
+public class CarSpec {
+      public string CarId {get;set;}
+      public string CarName {get;set;}
+      public string SatelliteNavigation {get;set;}
+      public string LeatherSeats {get;set;}
+      public string HeatedFrontSeats {get;set;}
+      public string BluetoothHandsfreeSystem {get;set;}
+      public string CruiseControl {get;set;}
+      public string AutomaticHeadlights {get;set;}
+      public string feature1 {get;set;} = "Not Available";
+      public string feature2 {get;set;} = "Not Available";
+      public string feature3 {get;set;} = "Not Available";
+      public string feature4 {get;set;} = "Not Available";
+      public string feature5 {get;set;} = "Not Available";
+      public string feature6 {get;set;} = "Not Available";
+      public string feature7 {get;set;} = "Not Available";
+      public string feature8 {get;set;} = "Not Available";
+      public string feature9 {get;set;} = "Not Available";
+      public string feature10 {get;set;} = "Not Available";
+      public string feature11 {get;set;} = "Not Available";
+      public string feature12 {get;set;} = "Not Available";
+      public string feature13 {get;set;} = "Not Available";
+      public string feature14 {get;set;} = "Not Available";
+      public string feature15 {get;set;} = "Not Available";
+      public string feature16 {get;set;} = "Not Available";
+      public string feature17 {get;set;} = "Not Available";
+      public string feature18 {get;set;} = "Not Available";
+      public string feature19 {get;set;} = "Not Available";
+      public string feature20 {get;set;} = "Not Available";
+      public string feature21 {get;set;} = "Not Available";
+      public string feature22 {get;set;} = "Not Available";
+      public string feature23 {get;set;} = "Not Available";
+      public string feature24 {get;set;} = "Not Available";
+      public string feature25 {get;set;} = "Not Available";
+      public string feature26 {get;set;} = "Not Available";
+      public string feature27 {get;set;} = "Not Available";
+      public string feature28 {get;set;} = "Not Available";
+      public string feature29 {get;set;} = "Not Available";
+      public string feature30 {get;set;} = "Not Available";
+      public string feature31 {get;set;} = "Not Available";
+      public string feature32 {get;set;} = "Not Available";
+      public string feature33 {get;set;} = "Not Available";
+      public string feature34 {get;set;} = "Not Available";
+      public string feature35 {get;set;} = "Not Available";
+      public string feature36 {get;set;} = "Not Available";
+      public string feature37 {get;set;} = "Not Available";
+      public string feature38 {get;set;} = "Not Available";
+      public string feature39 {get;set;} = "Not Available";
+      public string feature40 {get;set;} = "Not Available";
+      public string feature41 {get;set;} = "Not Available";
+      public string feature42 {get;set;} = "Not Available";
+      public string feature43 {get;set;} = "Not Available";
+      public string feature44 {get;set;} = "Not Available";
+      public string feature45 {get;set;} = "Not Available";
+      public string feature46 {get;set;} = "Not Available";
+      public string feature47 {get;set;} = "Not Available";
+      public string feature48 {get;set;} = "Not Available";
+      public string feature49 {get;set;} = "Not Available";
+      public string feature50 {get;set;} = "Not Available";
+      public string feature51 {get;set;} = "Not Available";
+      public string feature52{get;set;} = "Not Available";
+      public string feature53{get;set;} = "Not Available";
+      public string feature54{get;set;} = "Not Available";
+      public string feature55{get;set;} = "Not Available";
+      public string feature56{get;set;} = "Not Available";
+      public string feature57{get;set;} = "Not Available";
+      public string feature58{get;set;} = "Not Available";
+      public string feature59{get;set;} = "Not Available";
+      public string feature60{get;set;} = "Not Available";
+      public string feature61{get;set;} = "Not Available";
+      public string feature62{get;set;} = "Not Available";
+      public string feature63{get;set;} = "Not Available";
+      public string feature64{get;set;} = "Not Available";
+      public string feature65{get;set;} = "Not Available";
+      public string feature66{get;set;} = "Not Available";
+      public string feature67{get;set;} = "Not Available";
+      public string feature68{get;set;} = "Not Available";
+      public string feature69{get;set;} = "Not Available";
+      public string feature70{get;set;} = "Not Available";
+      public string feature71{get;set;} = "Not Available";
+      public string feature72{get;set;} = "Not Available";
+      public string feature73{get;set;} = "Not Available";
+      public string feature74{get;set;} = "Not Available";
+      public string feature75{get;set;} = "Not Available";
+      public string feature76{get;set;} = "Not Available";
+      public string feature77{get;set;} = "Not Available";
+      public string feature78{get;set;} = "Not Available";
+      public string feature79{get;set;} = "Not Available";
+      public string feature80{get;set;} = "Not Available";
+      public string feature81{get;set;} = "Not Available";
+      public string feature82{get;set;} = "Not Available";
+      public string feature83{get;set;} = "Not Available";
+      public string feature84{get;set;} = "Not Available";
+      public string feature85{get;set;} = "Not Available";
+      public string feature86{get;set;} = "Not Available";
+      public string feature87{get;set;} = "Not Available";
+      public string feature88{get;set;} = "Not Available";
+      public string feature89{get;set;} = "Not Available";
+      public string feature90{get;set;} = "Not Available";
+      public string feature91{get;set;} = "Not Available";
+      public string feature92{get;set;} = "Not Available";
+      public string feature93{get;set;} = "Not Available";
+      public string feature94{get;set;} = "Not Available";
+      public string feature95{get;set;} = "Not Available";
+      public string feature96{get;set;} = "Not Available";
+      public string feature97{get;set;} = "Not Available";
+      public string feature98{get;set;} = "Not Available";
+      public string feature99{get;set;} = "Not Available";
+      public string feature100{get;set;} = "Not Available";
+      public string feature101{get;set;} = "Not Available";
+ 
 }
